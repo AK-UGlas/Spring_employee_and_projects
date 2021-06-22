@@ -49,6 +49,7 @@ class EmployeeServiceApplicationTests {
 		projectRepo.save(project1);
 
 		project1.addEmployee(employee);
+		employee.addProject(project1);
 		projectRepo.save(project1);
 	}
 

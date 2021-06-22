@@ -16,13 +16,13 @@ public class EmployeeController {
     @Autowired
     EmployeeRepository employeeRepository;
 
-    @GetMapping(value = "/pirates")
-    public List<Employee> getAllPirates(){
+    @GetMapping(value = "/employees")
+    public List<Employee> getAllEmployees(){
         return  employeeRepository.findAll();
     }
 
-    @GetMapping(value = "/pirates/{id}")
-    public Optional<Employee> getPirate(@PathVariable Long id){
+    @GetMapping(value = "/employees/{id}")
+    public Optional<Employee> getEmployees(@PathVariable Long id){
         return employeeRepository.findById(id);
     }
 }
